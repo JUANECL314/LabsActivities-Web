@@ -1,7 +1,20 @@
 import {heroes} from './Data/hero.js'
+import {PrimerComp} from './PrimerComp.jsx'
+import {SecondComp} from './SecondComp.jsx'
 
+import {ThirdComp} from './ThirdComp.jsx'
+import { FourthComp } from './FourthComp.jsx'
+import { FifthComp } from './FifthComp.jsx'
 export function MyApp() {
-    const valor = 7;
+    <>
+        <PrimerComp />
+        <SecondComp />
+        <ThirdComp />
+        <FourthComp />
+        <FifthComp title = "Hola" subtitle={45}> </FifthComp>
+    </>
+    /*const valor = 7;
+
     if(true) {
         let valor  = 5;
         // console.log(valor);
@@ -66,7 +79,16 @@ export function MyApp() {
     console.log(getHeroeById(2));
     const  getHeroeByEmpresa = (empresa) =>  heroes.filter( (heroe) =>  heroe.owner===empresa); 
     console.log(getHeroeByEmpresa('Marvel'));
+
+    //Promesas
+    const promesa = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log('Dentro de la promesa');
+            
+        }, 3000);
+    });
    
+    promesa.then(() => console.log('Then de la promesa'));*/
 }
 
 
