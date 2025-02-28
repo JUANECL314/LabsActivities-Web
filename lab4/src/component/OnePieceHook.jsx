@@ -20,6 +20,7 @@ export const OnePieceHook = () => {
             </div>
             <div>
                 <button className='btn btn-primary' onClick={() => decrement()}>Anterior</button>
+                
                 <button className='btn btn-primary' onClick={() => increment()}>Siguiente</button>    
             </div>
             
