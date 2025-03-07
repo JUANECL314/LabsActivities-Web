@@ -6,7 +6,7 @@ import { Home } from './pages/Home';
 import { Perfil } from './pages/Perfil';
 import { Layout } from './pages/Layout';
 import { Login } from './pages/Login';
-import { Footer } from '../../clase060325/src/pages/Footer';
+import { Footer } from './pages/Footer';
 
 function App() {
 
