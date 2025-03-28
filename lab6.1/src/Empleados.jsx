@@ -6,6 +6,7 @@ import { Table,Button,Container,FormGroup,
     Modal,ModalHeader,ModalBody,ModalFooter,
     } from "reactstrap";
 
+import "./Empleados.css";
 const data  =[
     { idUsuario: 1, nombre: "Juan Eduardo", pApellido: "Cibrián", uApellido: "Loera", estaEnProyecto: "true", porcentajeStaff: 0.75, fechaIngreso: "2023-06-11",fechaNacimiento: "2003-03-14"},
     { idUsuario: 2, nombre: "Axel Ariel", pApellido: "Grande", uApellido: "Ruiz", estaEnProyecto: "true", porcentajeStaff: 0.94, fechaIngreso: "2023-01-10", fechaNacimiento: "2002-08-12"},
@@ -100,10 +101,12 @@ class Empleados extends React.Component {
             <>
             
                 <Container>
+                    <h1 className="titulo">Empleados de Accenture</h1>
                     <br />
                     <Button className="btn btn-success" onClick={() => this.mostrarModalInsertar()}>Crear</Button>
                     <br />
-                    <Table>
+                    <br />
+                    <Table className="tabla-BD">
                         <thead>
                             <tr>
                                 <th>ID</th>
@@ -114,6 +117,7 @@ class Empleados extends React.Component {
                                 <th>Porcentaje Staff</th>
                                 <th>Fecha Ingreso</th>
                                 <th>Fecha Nacimiento</th>
+                                <th>Modificar</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -237,6 +241,5 @@ class Empleados extends React.Component {
             </>
         )
     }
-}
-
+} 
 export default Empleados;

@@ -1,0 +1,30 @@
+body {
+    background-color: #000432;
+    
+}
+
+.titulo {
+    color: #fff;
+    font-size: 2.5em;
+    text-align: center;
+    margin-top: 1em;
+}
+
+.tabla-BD {
+    
+    background-color: #000432;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.tabla-BD th {
+    background-color: #000432;
+    color: #fff;
+ 
+}
+
+.tabla-BD td {
+    background-color: #000432;
+    color: #fff;
+
+}
