@@ -28,7 +28,7 @@ export const Layout = () => {
         
       
   </nav>
-    <hr/>
+    
     
 
   </div>;

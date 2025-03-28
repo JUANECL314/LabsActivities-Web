@@ -13,30 +13,30 @@ export function MyApp() {
         <FourthComp />
         <FifthComp title = "Hola" subtitle={45}> </FifthComp>
     </>
-    /*const valor = 7;
+    const valor = 7;
 
     if(true) {
         let valor  = 5;
-        // console.log(valor);
+        console.log(valor);
     }
-    // console.log(valor);
+    console.log(valor);
 
 
     const nombre = 'Juan';
     const apellido = 'Cibrian';
 
     const nombreCompleto = nombre+' '+apellido;
-    // console.log(nombreCompleto);
+     console.log(nombreCompleto);
 
 
     const nombreComp = `${nombre} ${apellido}`;
-    // console.log(nombreComp);
+    console.log(nombreComp);
 
 
     function getSaludo(nombre){
         return 'Hola ' + nombre;
     }
-    // console.log(`Este es un texto: ${getSaludo(nombre)} `);
+    console.log(`Este es un texto: ${getSaludo(nombre)} `);
     const estudiante = {
         matricula: 'A000001',
         nombre: 'Jorge',
@@ -46,11 +46,11 @@ export function MyApp() {
             zip: 64800
             }
             };
-    // console.table(estudiante);
+    console.table(estudiante);
     const estudiante2 ={...estudiante};
     estudiante2.nombre ='Ramon';
-    // console.table (estudiante);
-    // console.table (estudiante2);
+    console.table (estudiante);
+    console.table (estudiante2);
 
 
     const arreglo = [1,2,3,4,5];
@@ -88,7 +88,7 @@ export function MyApp() {
         }, 3000);
     });
    
-    promesa.then(() => console.log('Then de la promesa'));*/
+    promesa.then(() => console.log('Then de la promesa'));
 }
 
 
