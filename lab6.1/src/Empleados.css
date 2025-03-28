@@ -26,5 +26,10 @@ body {
 .tabla-BD td {
     background-color: #000432;
     color: #fff;
+}
 
+
+.boton-fondo {
+    background-color: #a055f5 !important;
+    border: 0px;
 }

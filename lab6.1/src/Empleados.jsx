@@ -103,7 +103,7 @@ class Empleados extends React.Component {
                 <Container>
                     <h1 className="titulo">Empleados de Accenture</h1>
                     <br />
-                    <Button className="btn btn-success" onClick={() => this.mostrarModalInsertar()}>Crear</Button>
+                    <Button className="btn btn-success boton-fondo" onClick={() => this.mostrarModalInsertar()}>Crear</Button>
                     <br />
                     <br />
                     <Table className="tabla-BD">
@@ -133,8 +133,9 @@ class Empleados extends React.Component {
                                         <td>{dato.fechaIngreso}</td>
                                         <td>{dato.fechaNacimiento}</td>
                                         <td>
-                                            <Button color="primary" onClick={() => this.mostrarModalActualizar(dato)}>Editar</Button>
-                                            <Button color="danger" onClick={() => this.eliminar(dato)}>Eliminar</Button>
+                                            <Button color="primary boton-fondo" onClick={() => this.mostrarModalActualizar(dato)}>Editar</Button>
+                                            
+                                            <Button color="danger boton-fondo " onClick={() => this.eliminar(dato)}>Eliminar</Button>
                                         </td>
                                         </tr>
 
@@ -175,7 +176,7 @@ class Empleados extends React.Component {
                         </FormGroup>
                         <FormGroup>
                             <label>Porcentaje Staff: </label>
-                            <input className="form-control" name="porcentajeStaff" type="text" onChange={this.handleChange} />
+                            <input className="form-control" name="porcentajeStaff" type="number" min="0" max="1" step="0.01" onChange={this.handleChange} value={this.state.form.porcentajeStaff} />
                         </FormGroup>
                         <FormGroup>
                             <label>Fecha Ingreso: </label>
@@ -187,8 +188,8 @@ class Empleados extends React.Component {
                         </FormGroup>
                     </ModalBody>
                     <ModalFooter>
-                        <Button  color="primary" onClick={() =>  this.insertar()} >Insertar </Button> 
-                        <Button  className="btn btn-danger" onClick={() =>  this.cerrarModalInsertar()}>Cancelar</Button>
+                        <Button  color="primary boton-fondo" onClick={() =>  this.insertar()} >Insertar </Button> 
+                        <Button  className="btn btn-danger boton-fondo" onClick={() =>  this.cerrarModalInsertar()}>Cancelar</Button>
                     </ModalFooter>
                 </Modal>
                 <Modal isOpen={this.state.modalActualizar}>
@@ -222,7 +223,7 @@ class Empleados extends React.Component {
                         </FormGroup>
                         <FormGroup>
                             <label>Porcentaje Staff: </label>
-                            <input className="form-control" name="porcentajeStaff" type="text" onChange={this.handleChange} value={this.state.form.porcentajeStaff} />
+                            <input className="form-control" name="porcentajeStaff" type="number" min="0" max="1" step="0.01" onChange={this.handleChange} value={this.state.form.porcentajeStaff} />
                         </FormGroup>
                         <FormGroup>
                             <label>Fecha Ingreso: </label>
@@ -230,12 +231,12 @@ class Empleados extends React.Component {
                         </FormGroup>
                         <FormGroup>
                             <label>Fecha Nacimientio: </label>
-                            <input className="form-control" name="fechaNacimiento" type="date" onChange={this.handleChange} value={this.state.form.fechaIngreso} />
+                            <input className="form-control" name="fechaNacimiento" type="date" onChange={this.handleChange} value={this.state.form.fechaNacimiento} />
                         </FormGroup>
                     </ModalBody>
                     <ModalFooter>
-                            <Button  color="primary" onClick={() =>  this.editar(this.state.form)} > Editar</Button>
-                            <Button  color="danger" onClick={() =>  this.cerrarModalActualizar()} > Cancelar</Button>
+                            <Button  color="primary boton-fondo" onClick={() =>  this.editar(this.state.form)} > Editar</Button>
+                            <Button  color="danger boton-fondo" onClick={() =>  this.cerrarModalActualizar()} > Cancelar</Button>
                     </ModalFooter> 
                 </Modal>
             </>
