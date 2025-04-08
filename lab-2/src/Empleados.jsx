@@ -15,7 +15,7 @@ const Empleados = () => {
     const [nuevoEmpleado, setNuevoEmpleado] = useState({idUsuario: "", nombre: "", pApellido: "", uApellido: "", estaEnProyecto: "", porcentajeStaff: "", fechaIngreso: "",fechaNacimiento: ""});
     const [editarEmpleado, setEditarEmpleado] = useState(null);
     
-    const apiUrl = "http://localhost:5000/empleados/"; 
+    const apiUrl = "http://localhost:80/empleados/"; 
 
     const fetchEmpleados = async () => {
         try {
@@ -42,7 +42,7 @@ const Empleados = () => {
 
     const updateEmpleado = async (idUsuario) => {
         try {
-            await axios.put(`${apiUrl}/${idUsuario}`, editarEmpleado);
+            await axios.put(`${apiUrl}/empleadosController.php?idUsuario=${idUsuario}`, editarEmpleado);
             fetchEmpleados();
             setEditarEmpleado(null);
         } catch (error) {
@@ -52,14 +52,15 @@ const Empleados = () => {
 
     const deleteEmpleado = async (idUsuario) => {
         try {
-            await axios.delete(`${apiUrl}/${idUsuario}`);
+            await axios.delete(`${apiUrl}/empleadosController.php?idUsuario=${idUsuario}`);
             fetchEmpleados();
+            
         } catch (error) {
             console.error("Error deleting empleado:", error);
         }
     };
     return (
-        <div>
+        <div  style = {{width:"100%",position: "fixed",top:250,left:0}} >
             <h1>CRUD de Empleados</h1>
 
             <h2>Crear empleado</h2>
@@ -111,13 +112,7 @@ const Empleados = () => {
             <ul>
                 {empleado.map((emp) => (
                     <li key={emp.idUsuario}>
-                        <p>{emp.nombre}</p>
-                        <p>{emp.pApellido}</p>
-                        <p>{emp.uApellido}</p>
-                        <p>{emp.estaEnProyecto}</p>
-                        <p>{emp.porcentajeStaff}</p>
-                        <p>{emp.fechaIngreso}</p>
-                        <p>{emp.fechaNacimiento}</p>
+                        <p>{emp.nombre} {emp.pApellido} {emp.uApellido} {emp.estaEnProyecto} {emp.porcentajeStaff} {emp.fechaIngreso} {emp.fechaNacimiento}</p>
                         <button onClick={() => setEditarEmpleado(emp)}>Editar</button>
                         <button onClick={() => deleteEmpleado(emp.idUsuario)}>Eliminar</button>
                     </li>
